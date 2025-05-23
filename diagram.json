@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "author": "Mukesh Iyappan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led-bar-graph",
+      "id": "bargraph1",
+      "top": -168,
+      "left": 100.8,
+      "attrs": { "color": "lime" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -145.3, "left": -19.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -159.25,
+      "left": 278.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -149.65,
+      "left": 288,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -140.049999999886,
+      "left": 297.600000000114,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -130.44999999977202,
+      "left": 307.200000000228,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": -120.84999999965802,
+      "left": 316.800000000342,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": -111.24999999954403,
+      "left": 326.400000000456,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": -101.64999999943004,
+      "left": 336.00000000056997,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r8",
+      "top": -92.05,
+      "left": 345.6,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r9",
+      "top": -82.449999999886,
+      "left": 355.200000000114,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r10",
+      "top": -72.84999999977201,
+      "left": 364.800000000228,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -155.6, "left": -288, "attrs": {} }
+  ],
+  "connections": [
+    [ "pot1:VCC", "uno:5V", "red", [ "v28.8", "h-96.8", "v297.6", "h220.8", "v-57.6", "h9.6" ] ],
+    [
+      "pot1:GND",
+      "uno:GND.2",
+      "black",
+      [ "v38.4", "h-76.8", "v278.4", "h76.8", "v19.2", "h163.2", "v-9.6" ]
+    ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v38.4", "h-106", "v297.6", "h336" ] ],
+    [ "bargraph1:A1", "uno:2", "green", [ "h-19.2", "v124.8", "h-9.6" ] ],
+    [ "bargraph1:A2", "uno:3", "green", [ "h-9.6", "v105.6", "h124.8", "v19.2" ] ],
+    [ "bargraph1:A3", "uno:4", "green", [ "h-28.8", "v105.6", "h144", "v9.6" ] ],
+    [ "bargraph1:A4", "uno:5", "green", [ "h-38.4", "v105.6", "h144" ] ],
+    [ "bargraph1:A5", "uno:6", "green", [ "h-38.4", "v105.59", "h9.6" ] ],
+    [ "bargraph1:A6", "uno:7", "green", [ "h-28.8", "v105.59", "h115.2" ] ],
+    [ "bargraph1:A7", "uno:8", "green", [ "h-19.2", "v76.79", "h86.4", "v9.6" ] ],
+    [ "bargraph1:C1", "r1:1", "green", [ "v9.6", "h134.62" ] ],
+    [ "bargraph1:C2", "r2:1", "green", [ "h0" ] ],
+    [ "bargraph1:C3", "r3:1", "green", [ "h0" ] ],
+    [ "bargraph1:C4", "r4:1", "green", [ "h0" ] ],
+    [ "bargraph1:C5", "r5:1", "green", [ "h0" ] ],
+    [ "bargraph1:C6", "r6:1", "green", [ "h0" ] ],
+    [ "bargraph1:C7", "r7:1", "green", [ "h0" ] ],
+    [ "bargraph1:C8", "r8:1", "green", [ "h0" ] ],
+    [ "bargraph1:C9", "r9:1", "green", [ "h0" ] ],
+    [ "bargraph1:C10", "r10:1", "green", [ "h0" ] ],
+    [ "r1:2", "r2:2", "green", [ "v0" ] ],
+    [ "r2:2", "r3:2", "green", [ "v0" ] ],
+    [ "r3:2", "r4:2", "green", [ "v0" ] ],
+    [ "r4:2", "r5:2", "green", [ "v9.6", "h8.4" ] ],
+    [ "r5:2", "r6:2", "green", [ "v0" ] ],
+    [ "r6:2", "r7:2", "green", [ "v0" ] ],
+    [ "r7:2", "r8:2", "green", [ "v0" ] ],
+    [ "r8:2", "r9:2", "green", [ "v0" ] ],
+    [ "r9:2", "r10:2", "green", [ "v0", "h8.4" ] ],
+    [ "r10:2", "uno:GND.3", "green", [ "v144", "h-58.8", "v153.6", "h-182.4" ] ],
+    [ "servo1:V+", "uno:5V", "green", [ "h-48", "v355.3", "h489.6", "v-19.2" ] ],
+    [ "servo1:GND", "uno:GND.1", "black", [ "h-57.6", "v86.4", "h470.4" ] ],
+    [ "servo1:PWM", "uno:9", "green", [ "h-38.4", "v57.8", "h480", "v9.6" ] ],
+    [ "bargraph1:A8", "uno:10", "green", [ "h-19.2", "v57.59", "h-9.6" ] ],
+    [ "bargraph1:A9", "uno:11", "green", [ "h-19.2", "v57.59", "h57.6", "v28.8" ] ],
+    [ "bargraph1:A10", "uno:12", "blue", [ "h-19.2", "v38.39", "h48", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}
